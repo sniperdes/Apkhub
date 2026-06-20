@@ -1,209 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apps Premium TV</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
-color:white;
-min-height:100vh;
-}
-
-header{
-text-align:center;
-padding:60px 20px;
-background:linear-gradient(90deg,#7c3aed,#2563eb,#06b6d4);
-}
-
-header h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-header p{
-font-size:1.2rem;
-}
-
-.hero{
-max-width:1000px;
-margin:auto;
-padding:50px 20px;
-text-align:center;
-}
-
-.hero h2{
-font-size:2.5rem;
-margin-bottom:15px;
-background:linear-gradient(90deg,#22d3ee,#a855f7);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.hero p{
-font-size:1.1rem;
-color:#cbd5e1;
-}
-
-.download-card{
-max-width:700px;
-margin:40px auto;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
-border-radius:25px;
-padding:40px;
-text-align:center;
-box-shadow:0 0 40px rgba(124,58,237,.4);
-}
-
-.app-logo{
-width:120px;
-height:120px;
-margin:auto;
-border-radius:30px;
-background:linear-gradient(135deg,#7c3aed,#06b6d4);
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:50px;
-margin-bottom:20px;
-}
-
-.download-btn{
-display:inline-block;
-margin-top:25px;
-padding:18px 40px;
-background:linear-gradient(90deg,#22c55e,#16a34a);
-color:white;
-text-decoration:none;
-font-size:1.2rem;
-font-weight:bold;
-border-radius:50px;
-transition:.3s;
-}
-
-.download-btn:hover{
-transform:scale(1.08);
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-max-width:1200px;
-margin:auto;
-padding:50px 20px;
-}
-
-.card{
-background:rgba(255,255,255,.05);
-padding:25px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,.1);
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.ad{
-max-width:900px;
-height:120px;
-margin:40px auto;
-background:rgba(255,255,255,.08);
-border:2px dashed #38bdf8;
-display:flex;
-justify-content:center;
-align-items:center;
-border-radius:20px;
-font-size:20px;
-}
-
-footer{
-text-align:center;
-padding:40px;
-color:#94a3b8;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarga para Smart TV</title>
+    <style>
+        body { background-color: #121212; color: white; font-family: Arial, sans-serif; text-align: center; padding-top: 10%; }
+        h1 { font-size: 3rem; }
+        .contador { font-size: 2rem; color: #ff9900; margin: 20px; }
+        .btn-descarga { display: none; font-size: 2.5rem; background-color: #007bff; color: white; padding: 15px 40px; border: none; border-radius: 10px; cursor: pointer; text-decoration: none; }
+        .btn-descarga:focus { background-color: #28a745; outline: 5px solid #fff; } /* Crucial para el control remoto de la TV */
+        .publicidad { margin: 30px auto; min-height: 250px; width: 100%; max-width: 728px; background: #222; }
+    </style>
 </head>
-
 <body>
 
-<header>
-<h1>📺 Apps Premium TV</h1>
-<p>Las mejores aplicaciones para tu Smart TV y celular Android</p>
-</header>
+    <h1>Tu descarga estará lista en breve...</h1>
+    
+    <!-- ZONA DE PUBLICIDAD (Aquí pegas el código de tu red de anuncios) -->
+    <div class="publicidad">
+        <!-- Pega aquí el script HTML de Adsterra o Monetag -->
+        <p style="color:#666; padding-top:100px;">[Espacio Publicitario]</p>
+    </div>
 
-<section class="hero">
-<h2>Todo lo que necesitás en un solo lugar</h2>
+    <div class="contador" id="tiempo">Esperando 10 segundos...</div>
+    
+    <!-- BOTÓN OCULTO QUE SE ACTIVA AL FINALIZAR EL TIEMPO -->
+    <a href="TU_ENLACE_DIRECTO_DE_MEDIAFIRE_AQUÍ" class="btn-descarga" id="boton">DESCARGAR AHORA</a>
 
-<p>
-Descubrí aplicaciones para entretenimiento, reproductores multimedia,
-herramientas, streaming, utilidades y mucho más.
-</p>
-</section>
+    <script>
+        let segundos = 10;
+        const textoTiempo = document.getElementById('tiempo');
+        const botonDescarga = document.getElementById('boton');
 
-<div class="ad">
-ESPACIO PUBLICITARIO
-</div>
-
-<div class="download-card">
-
-<div class="app-logo">📱</div>
-
-<h2>Aplicación Destacada</h2>
-
-<p style="margin-top:15px;color:#cbd5e1;">
-Última versión disponible para Android y Smart TV.
-</p>
-
-<a href="#" class="download-btn">
-⬇ DESCARGAR AHORA
-</a>
-
-</div>
-
-<section class="features">
-
-<div class="card">
-<h3>📺 Smart TV</h3>
-<p>Aplicaciones optimizadas para Android TV y TV Box.</p>
-</div>
-
-<div class="card">
-<h3>📱 Android</h3>
-<p>Apps para celulares y tablets con las últimas actualizaciones.</p>
-</div>
-
-<div class="card">
-<h3>⚡ Descarga rápida</h3>
-<p>Acceso sencillo a los enlaces de descarga.</p>
-</div>
-
-<div class="card">
-<h3>🆕 Actualizaciones</h3>
-<p>Nuevas versiones y novedades constantemente.</p>
-</div>
-
-</section>
-
-<div class="ad">
-PUBLICIDAD 728x90
-</div>
-
-<footer>
-© 2026 Apps Premium TV
-</footer>
-
+        const cuentaAtras = setInterval(() => {
+            segundos--;
+            textoTiempo.textContent = `Esperando ${segundos} segundos...`;
+            
+            if (segundos <= 0) {
+                clearInterval(cuentaAtras);
+                textoTiempo.style.display = 'none';
+                botonDescarga.style.display = 'inline-block';
+                botonDescarga.focus(); // Enfoca automáticamente el botón para que el usuario solo tenga que pulsar "OK" en su control
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
-
